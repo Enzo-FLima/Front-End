@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+	<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Site redes de computadores</title>
+
+		<style>
+
+			* { box-sizing: border-box; }
+			
+			body{
+				font-family: sans-serif;
+				background-color: #201D58;
+				color: black;
+				line-height: 1.6;
+			}
+			
+			h1 {
+				font-size: 40px;
+				margin-top: 40px;
+				letter-spacing: 2px;
+			}
+
+			h2 {
+				color: #00aaff;
+				margin-bottom: 40px;
+			}
+
+
+
+			.card{
+				background-color: #B0C4DE;
+				padding: 10px;
+				margin-bottom: 25px;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+				
+			}
+
+			.corpo{
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+			
+			th {
+				background-color: #0056b3;
+				color: white;
+				text-transform: uppercase; /* Letras maiúsculas para o título */
+				font-size: 0.85em;
+			}
+
+			tr:hover {
+				background-color: #f0f7ff; /* Destaque azul claro quando passa o mouse */
+			}
+
+			table{
+				width: 100%;
+				border-collapse: collapse;
+				font-family:arial, sans-serif;
+			}
+		
+			th, td{
+				padding: 12px;
+				text-align: left;
+				border-bottom: 1px solid #3B3B3B;
+			}
+
+			th{
+				color: black;
+			}
+			.caixa-form { 
+				background: white; 
+				padding: 20px; 
+				max-width: 700px;
+				margin: 40px auto;
+				text-align: center;
+				border-radius: 8px; 
+				margin-bottom: 20px; 
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+			}
+
+			.botao-enviar {
+				background-color: #2e7d32; /* Verde escuro */
+				color: white;
+				padding: 12px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				width: 90%;
+				margin-top: 15px;
+				font-weight: bold;
+			}
+
+			.botao-enviar:hover {
+				background-color: #1b5e20; /* Escurece ao passar o rato */
+			}
+
+			textarea {
+				width: 90%;
+				padding: 10px;
+				border: 1px solid #3B3B3B;
+				border-radius: 4px;
+				font-family: Arial, sans-serif;
+			}
+
+			#satisForm {
+				background-color: #fff;
+				padding: 15px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+			}
+			
+			.perguntas {
+				max-width: 700px;    
+				margin: 0 auto;      
+				padding: 20px;       
+			}
+			
+			.op{
+				padding: 10px;
+				margin: 5px 0;
+				border: 1px solid #3B3B3B;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: 0.3s;
+				border: 2px solid #eee;
+				transition: all 0.3s ease;
+			}
+			
+			.op:hover{
+				background-color: #f0f0f0;
+				border-color: #0056b3;
+				transform: translateX(8px);
+			}
+			
+			.verd{
+				background-color: #c8e6c9;
+				border-color: #4caf50;
+				color: #2e7d32; 
+				font-weight: bold;
+			}
+	
+			.falso{
+				background-color: #ffcdd2;
+				border-color: #f44336;
+				color: #c62828;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="corpo">
+			<h1 style="color: white; text-align: center;">💻 Redes de Computadores</h1>
+			<div class="card">
+				<h3>Introdução às Redes de Computadores</h3>
+				<p>Em um mundo hiperconectado, entender como os dados viajam de um ponto A para um ponto B é fundamental para qualquer entusiasta de tecnologia ou aspirante a desenvolvedor.</p>
+		
+				<h3>1)O que é uma rede de computadores</h3>
+				<p>Em termos simples, uma rede é um conjunto de dispositivos (nós) conectados entre si para compartilhar recursos e trocar informações. Esses recursos podem ser arquivos, impressoras ou a própria conexão 				com a internet.</p>
+		
+				<h4>Componentes basicos:</h4>
+				<ul>
+					<li><b>Dispositivos Finais:</b> Computadores, smartphones, servidores e IoT.</li>
+					<li><b>Meios de Transmissão:</b> Cabos de fibra óptica, cabos de cobre (Ethernet) ou ondas de rádio (Wi-Fi).</li>
+					<li><b>Dispositivos de Interconexão:</b> Roteadores, switches e access points.</li>
+				</ul>
+			</div>		
+			
+			<div class="card" style="max-width: 600px;  margin-left: auto; margin-right: auto;">
+				<h3>2. Classificação das Redes</h3>
+				<p>As redes são classificadas principalmente pela área geográfica que ocupam:</p>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Tipo</th>
+							<th>Nome por extenso</th>
+							<th>Descrição</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+						<tr>
+							<td><b>PAN</b></td>
+							<td>Personal Area Network</td>
+							<td>Redes pessoais (ex: Bluetooth entre celular e fone).</td>
+						</tr>
+				
+						<tr>
+							<td><b>LAN</b></td>
+							<td>Local Área Network</td>
+							<td>Redes locais (sua casa, escola ou escritório).</td>
+						</tr>
+	
+						<tr>
+							<td><b>WAN</b></td>
+							<td>Metropolitan Area Network</td>
+							<td>Conecta redes dentro de uma cidade.</td>
+						</tr>
+	
+						<tr>
+							<td><b>WAN</b></td>
+							<td>Wide Area Network</td>
+							<td>Redes de longa distância (a Internet é a maior WAN).</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="card">
+				<h3>3. Topologias de Rede</h3>
+				<p>A topologia define a "forma" ou o layout da rede. As mais comuns hoje são:</p>
+				<ul>
+					<li><b>Estrela:</b> Todos os dispositivos se conectam a um nó central (geralmente um switch). Se um cabo falha, apenas aquele dispositivo cai.</li>
+					<li><b>Malha (Mesh):</b> Todos se conectam com todos. É a mais resiliente, usada em sistemas críticos e roteadores Wi-Fi modernos.</li>
+				</ul>
+			
+				<h3>4. O Modelo OSI: A Linguagem Universal</h3>
+				<p>Para que dispositivos de fabricantes diferentes se comuniquem, o modelo OSI (Open Systems Interconnection) divide o processo em 7 camadas. Pense nisso como uma linha de montagem:</p>
+				<p><b>1. Física:</b> Transmissão de bits brutos pelo meio físico.</p>
+				<p><b>2. Enlace:</b> Endereçamento físico (MAC Address) e detecção de erros.</p>
+				<p><b>3. Rede:</b> Roteamento de pacotes e endereçamento lógico (IP).</p>
+				<p><b>4. Transporte:</b> Controle de fluxo e correção de erros (TCP/UDP).</p>
+				<p><b>5. Sessão:</b> Estabelecimento e manutenção de conexões.</p>
+				<p><b>6. Apresentação:</b> Tradução, criptografia e compressão de dados.</p>
+				<p><b>7. Aplicação:</b> Onde o usuário interage (HTTP, FTP, DNS).</p>
+	
+				<h3>5. Protocolos Essenciais: Os "Atores" da Internet</h3>
+				<p>Protocolos são regras que regem a comunicação. Sem eles, os computadores falariam "línguas" diferentes.</p>
+				
+				<ul>
+					<li><b>IP (Internet Protocol):</b> Identifica o endereço de cada máquina.</li>
+					<li><b>TCP (Transmission Control Protocol):</b> Garante que os dados cheguem na ordem correta e sem perdas.</li>
+					<li><b>NS (Domain Name System):</b> O "catálogo telefônico" da web. Ele transforma google.com no endereço IP numérico correspondente.</li>
+					<li><b>HTTP/HTTPS:</b> Protocolo de transferência de hipertexto usado para carregar sites.</li>
+				</ul>
+			</div>
+			
+			<div class="card">
+				<h2 style="text-align: center;"><b>Exercícios de Fixação: Redes de Computadores</b></h2>
+		
+				<div class="perguntas">
+					<p>1. Uma empresa instalou uma rede interna para conectar os computadores de todos os seus funcionários dentro de um único edifício de escritórios. Essa configuração é classificada como uma 						rede:</p>
+					<ul>
+						<li class="op" onclick="veri(this, false)">A) PAN (Personal Area Network)</li>
+						<li class="op" onclick="veri(this, true)">B) LAN (Local Area Network)</li>
+						<li class="op" onclick="veri(this, false)">C) MAN (Metropolitan Area Network)</li>
+						<li class="op" onclick="veri(this, false)">D) WAN (Wide Area Network)</li>
+					</ul>
+				</div>
+		
+	  			<div class="perguntas">
+					<p>2. No Modelo OSI, qual camada é responsável por determinar a melhor rota para os dados e gerenciar o endereçamento lógico (IP) dos pacotes?</p>
+					<ul>
+						<li class="op" onclick="veri(this, false)">A) Camada 1 - Física</li>
+						<li class="op" onclick="veri(this, false)">B) Camada 2 - Enlace</li>
+						<li class="op" onclick="veri(this, true)">C) Camada 3 - Rede</li>
+						<li class="op" onclick="veri(this, false)">D) Camada 4 - Transporte</li>
+					</ul>
+				</div>
+	
+				<div class="perguntas">
+					<p>3. Quando você digita "www.google.com" no navegador, um serviço entra em ação para traduzir esse nome amigável para o endereço IP real do servidor. Esse protocolo é o:</p>
+					<ul>
+						<li class="op" onclick="veri(this, false)">A) HTTP</li>
+						<li class="op" onclick="veri(this, false)">B) TCP</li>
+						<li class="op" onclick="veri(this, true)">C) DNS</li>
+						<li class="op" onclick="veri(this, false)">D) FTP</li>
+					</ul>
+				</div>
+
+			</div>
+				
+			<script>
+				function veri(item, correto){
+					if(correto){
+						item.classList.add('verd');
+					} else{
+						item.classList.add('falso');
+					}
+				}
+			</script>
+
+			<div class="caixa-form" style="">
+				<h3>📝 Sua opinião é importante</h3>	
+				<form id="satisForm">
+					<p>Como você avalia este conteúdo?</p>
+					<div style="cursor: pointer;">
+						<label><input type="radio" name="nota" value="1"> 1 </label>
+						<label><input type="radio" name="nota" value="2"> 2 </label>
+						<label><input type="radio" name="nota" value="3"> 3 </label>
+						<label><input type="radio" name="nota" value="4"> 4 </label>
+						<label><input type="radio" name="nota" value="5"> 5 </label>
+	
+						<p>O que podemos melhorar?</p>
+						<textarea id="sugestao" rows="4" placeholder="Deixe seu comentário aqui..."></textarea>
+	
+						<button type="button" class="botao-enviar" onclick="enviarFeedback()">Enviar</button>
+					</div>
+				</form>
+			</div>
+		
+			<script>
+				function enviarFeedback(){
+					alert("Obrigado por enviar seu feedback! Ele foi enviado com sucesso.");
+					document.getElementById("satisForm").reset();
+				}
+			</script>
+		</div>
+	</body>
+</html>
