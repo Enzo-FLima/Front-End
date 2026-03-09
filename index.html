@@ -6,218 +6,10 @@
     <meta name="author" content="Portal Computação">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arquivo Confuso da Computação</title>
-
-    <style>
-
-    body{
-        background-color: #020c22;
-        color: #f1f5f9;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-    }    
-
-    #pagina {
-        max-width: 1800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    header {
-        text-align: center;
-        padding: 10px 40px;
-        background: linear-gradient(135deg, #1e293b, #0f172a);
-        border-radius: 15px;
-        margin-bottom: 10px;
-        border: 1px solid #334155;
-    }
-
-    h1 { 
-	color: #38bdf8; 
-	margin: 0; 
-	font-size: 2.5rem; 
-    }
-
-
-    
-    header p { 
-	color: #94a3b8; 
-	font-style: italic; 
-    }
-
-    nav {
-        background: #1e293b;
-        padding: 10px;
-        border-radius: 10px;
-        position: sticky;
-        top: 10px;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin: 0;
-    }
-
-    nav a {
-	color: #38bdf8;
-	text-decoration: none;
-	font-weigth: bold;
-	padding: 5px 10;
-	transition: 0.3s;
-	
-    }
-
-    nav a:hover{
-	color: #fff;
-    }
-
-    section{
-	margin-bottom: 50px;
-    }
-
-    h2 {
-	border-bottom: 2px solid #38bdf8;
-	display: block;
-	padding-bottom: 5px;
-	margin-bottom: 25px;
-	color: #38bdf8;
-    }
-
-    article{
-	background: #1e293b;
-	padding: 15px;
-	margin-bottom: 20px;
-	border-radius: 15px;
-	border-left: 5px solid #38bdf8;
-	transition: transform 0.3s ease;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-	max-width: 1200px;
-    }
-
-    article:hover {
-	transform: translateX(5px); 
-    }
-
-    article h3 { 
-	margin-top: 0; 
-	color: #7dd3fc; 
-    }
- 
-    pre, code{
-	background: #000;
-	color: #4ade80;
-	padding: 10px;
-	border-radius: 5px;
-	display: block;
-	font-family: 'Courier new', monospace;
-    }
-
-    table {
-	width: 50%;
-	border-collapse: collapse;
-	background: #1e293b;
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 10px 0;
-	margin-left: auto;
-	margin-right: auto;
-    }
-
-    td, th{
-	padding: 15px;
-	text-align: left;
-	border-bottom: 1px solid #334155;
-    }
-
-    th {
-	color: #38bdf8;
-	background: #334155;
-    }
-
-    form{
-	background: #1e293b;
-	padding: 25px;
-	border-radius: 15px;
-	border: 1px solid #334155;
-    }
-
-    legend {
-	font-weight: bold;
-	color: #38bdf8;
-	font-size: 1.2rem;
-    }
-   
-    label {
-	display: block;
-	margin-bottom: 8px;
-	font-weight: bold;
-    }
-
-    form {
-	width: 50%;
-	margin: 0 auto;
-    }
-
-    input[type="text"], input[type="email"], input[type="number"], input[type="date"], select, textarea {
-        width: 40%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        border: 1px solid #334155;
-        background: #0f172a;
-        color: #fff;
-    }
-
-    input[type="submit"] {
-	background: #38bdf8;
-	color: #0f172a;
-	border: none;
-	padding: 15px 20px;
-	font-weight: bold;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: 0.3s;
-    }
-
-    input[type="submit"]:hover {
-	background: #7dd3fc;
-    }
-
-    footer {
-	text-align: center;
-	padding: 40px;
-	background: #0f172a;
-	border-top: 1px solid #334155;
-	color: #94a3b8;
-	margin-top: 50px;
-    }
-
-    blockquote {
-	border-left: 4px solid #4ade80;
-	padding-left: 20px;	
-	font-style: italic;
-	color: #cbd5e1;
-    }
-
-    aside {
-	background: rgba(56, 189, 248, 0.1);
-	padding: 15px;
-	border-radius: 8px;
-	border: 1px dashed #38bdf8;
-	margin: 20px 0;
-	width: 67%;
-    }
-    </style>
-
 </head>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <body>
 
@@ -244,14 +36,19 @@
         <section id="pioneiros">
             <h2>Pioneiros Esquecidos</h2>
 
-            <article>
-                <h3>Ada Lovelace</h3>
-                <p>Considerada a primeira programadora da história.</p>
-                <details>
-                    <summary>Ver mais</summary>
-                    <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
-                </details>
-            </article>
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body"></div>
+                <article>
+                    <h3>Ada Lovelace</h3>
+                    <p>Considerada a primeira programadora da história.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+                    </details>
+                </article>
+            </div>
+        </div>    
+
 
             <article>
                 <h3>Alan Turing</h3>
@@ -334,7 +131,7 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
 
             <div>
                 <table border="1">
-                    <caption style="color: #38bdf8;">Linguagens e Ano de Criação</caption>
+                    <caption>Linguagens e Ano de Criação</caption>
                     <thead>
                         <tr>
                             <th>Linguagem</th>
@@ -527,7 +324,7 @@ Valor atual: melhor não calcular.
 
 <section>
 
-    <h2 style="margin: 0 auto 25px auto; width: fit-content">Tabela Totalmente Necessária</h2>
+    <h2>Tabela Totalmente Necessária</h2>
 
     <table border="1">
         <tr>
@@ -699,7 +496,7 @@ CON CON
 
 <section>
 
-    <h2 style="margin: 0 auto 25px auto; width: fit-content">Tabela do Caos Digital</h2>
+    <h2>Tabela do Caos Digital</h2>
 
     <table border="1">
         <tr>
@@ -729,11 +526,11 @@ CON CON
 
 <section id="form">
 
-    <h2 style="margin: 0 auto 25px auto; width: fit-content">Envie um Fato Inútil</h2>
+    <h2>Envie um Fato Inútil</h2>
 
     <form>
         <fieldset>
-            <legend style="margin: auto;">Cadastro de Inutilidades</legend>
+            <legend>Cadastro de Inutilidades</legend>
 
             <label>Nome:</label>
             <input type="text" name="nome">
@@ -750,11 +547,11 @@ CON CON
     
 </section>
  <section id="formulario">
-            <h2 style="margin: 0 auto 25px auto; width: fit-content">Envie sua Curiosidade</h2>
+            <h2>Envie sua Curiosidade</h2>
 
             <form>
                 <fieldset>
-                    <legend style="margin: auto;">Informações</legend>
+                    <legend>Informações</legend>
 
                     <label>Nome:</label>
                     <input type="text" name="nome">
@@ -784,11 +581,11 @@ CON CON
     
 <section id="formulario-secreto">
 
-    <h2 style="margin: 0 auto 25px auto; width: fit-content">Envie um Bug ou Easter Egg</h2>
+    <h2>Envie um Bug ou Easter Egg</h2>
 
     <form>
         <fieldset>
-            <legend style="margin: auto;">Cadastro Suspeito</legend>
+            <legend>Cadastro Suspeito</legend>
 
             <label>Seu nome:</label>
             <input type="text" name="nome">
