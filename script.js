@@ -1,12 +1,12 @@
-const img = document.getElementById("main");
+const cria = document.getElementById("main");
 const btn = document.getElementById("btn");
 
 const estados = {
-    normal: "./imagensJS/Criatura fofinha de pelúcia verde menta.png",
+    normal:  "./imagensJS/Criatura fofinha de pelúcia verde menta.png",
+    puto: "./imagensJS/Brava.png",
+    morto: "./imagensJS/morto.png",
     comendo: "./imagensJS/criatura_comendo.png",
-    feliz: "./imagensJS/criatura_feliz.png",
-    fome: "./imagensJS/Brava.png",
-    fome2: "./imagensJS/morto.png"
+    alimentado: "./imagensJS/",  
 };
 
 let contador = 0;
@@ -14,21 +14,58 @@ let intervalo = null;
 let timeClick = null;
 let timeOut = null;
 
-function initConta(){
-    if(intervalo) clearInterval(intervalo);
-    intervalo = setInterval(() => {
-        contador++;
-
-        console.log("Tempo: " + contador);
-
-        if(contador == 30){
-            img.src = estados.fome
-        }
+function controlador (){
+    if(intervalo) clearInterval(intervalo)
         
-        if(contador == 60){
-            img.src = estados.fome2
-        }
+        intervalo = setInterval(() => {
+            contador++;
 
-}, 1000)};
+            console.log("tempo:",contador);
+            
+            if (contador == 30){
+                cria.src = estados.puto;
+            }
 
-initConta();
+            if(contador == 60){
+                cria.src = estados.morto;
+                clearInterval(intervalo);
+            }
+        }, 1000);
+}
+
+function alimentando(){
+    cria.src = estados.comendo;
+    contador = 0;
+    console.log("alimentando");
+
+    if(timeClick) clearInterval(timeClick);;
+
+    timeClick = setTimeout(() => {
+        cria.src = estados.comendo;
+        timeOut = setTimeout(() => {
+            cria.src = estados.normal;
+        }, 2000);
+    }, 5000);
+}
+
+controlador();
+
+function mudarClima() {
+    const checkbox = document.getElementById("theme-toggle");
+    const html = document.documentElement; // Pega a tag <html>
+    const corpo = document.body;
+
+    if (checkbox.checked) {
+        // DIA
+        html.setAttribute("data-theme", "cupcake"); // Tema fofinho e claro
+        corpo.style.backgroundImage = "url('./imagensJS/fundo.png')";
+        console.log("Bom dia!");
+    } else {
+        // NOITE
+        html.setAttribute("data-theme", "dracula"); // Tema escuro
+        corpo.style.backgroundImage = "url('./imagensJS/noite.png')";
+        console.log("Boa noite!");
+    }
+}
+
+window.onload = mudarClima;
