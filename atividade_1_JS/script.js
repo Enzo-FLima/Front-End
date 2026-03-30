@@ -57,12 +57,12 @@ function mudarClima() {
 
     if (checkbox.checked) {
         // DIA
-        html.setAttribute("data-theme", "cupcake"); // Tema fofinho e claro
+        html.setAttribute("data-theme", "cupcake"); 
         corpo.style.backgroundImage = "url('./imagensJS/fundo.png')";
         console.log("Bom dia!");
     } else {
         // NOITE
-        html.setAttribute("data-theme", "dracula"); // Tema escuro
+        html.setAttribute("data-theme", "dracula"); 
         corpo.style.backgroundImage = "url('./imagensJS/noite.png')";
         console.log("Boa noite!");
     }
