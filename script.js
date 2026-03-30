@@ -52,7 +52,7 @@ controlador();
 
 function mudarClima() {
     const checkbox = document.getElementById("theme-toggle");
-    const html = document.documentElement; // Pega a tag <html>
+    const html = document.documentElement; 
     const corpo = document.body;
 
     if (checkbox.checked) {
