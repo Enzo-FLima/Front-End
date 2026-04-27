@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+    <style>
+    body {
+        background-color: #020c22; 
+        color: #f1f5f9;            
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .grupo-card {
+        background-color: #0f172a; 
+        border: 1px solid #1e293b;  
+        border-left: 5px solid #38bdf8; 
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+        color: #38bdf8;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        color: #7dd3fc; 
+        margin-top: 0;
+    }
+
+    h3 {
+        color: #94a3b8;
+        font-size: 1rem;
+    }
+
+    
+    ul {
+        list-style-type: none; 
+        padding: 0;
+    }
+
+    li {
+        background: rgba(56, 189, 248, 0.1); 
+        margin: 5px 0;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border-left: 2px solid #38bdf8;
+    }
+
+    details {
+        background-color: #1e293b;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+    summary {
+        color: #38bdf8;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+    }
+
+    summary:hover {
+        color: #7dd3fc;
+    }
+
+    details p {
+        font-style: italic;
+        color: #cbd5e1;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tabela de Grupos e Fatos Históricos</h1>
+
+        <div id="grupo-a" class="grupo-card">
+            <h2>🅰️ Grupo A</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            
+            <details id="fatos-a">
+                <summary>Saiba Mais</summary>
+                <p>O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.</p>
+            </details>
+        </div>
+        
+        <div id="grupo-b" class="grupo-card">
+            <h2>🅱️ Grupo B</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Vaga Europeia (Bósnia)</li>
+            </ul>
+
+            <details id="fatos-b">
+                <summary>Saiba Mais</summary>
+                <p>O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.</p>
+            </details>
+        </div>
+
+        <div id="grupo-c" class="grupo-card">
+            <h2>🅲 Grupo C</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+
+            <details id="fatos-c">
+                <summary>Saiba Mais</summary>
+                <p>Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.</p>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
