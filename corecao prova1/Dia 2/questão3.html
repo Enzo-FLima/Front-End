@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <style>
+        body {
+            background-color: #020c22;
+            color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #38bdf8;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        }
+
+        .grupo-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-left: 5px solid #38bdf8;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #7dd3fc;
+            margin-top: 0;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(56, 189, 248, 0.05);
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #38bdf8;
+        }
+
+        details {
+            background-color: #1e293b;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #334155;
+        }
+
+        summary {
+            color: #38bdf8;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+
+        summary:hover {
+            color: #7dd3fc;
+        }
+
+        details p {
+            font-style: italic;
+            color: #cbd5e1;
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-proximo {
+            background-color: #38bdf8;
+            color: #020c22;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-proximo:hover {
+            background-color: #7dd3fc;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Grupos e Fatos</h1>
+
+        <div id="item1" class="grupo-card">
+            <h2 id="titulo1">🅰️ Grupo A</h2>
+            <h3>Seleções</h3>
+            <ul id="lista1">
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p id="fato1">O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.</p>
+            </details>
+        </div>
+
+        <div id="item2" class="grupo-card">
+            <h2 id="titulo2">🅱️ Grupo B</h2>
+            <h3>Seleções</h3>
+            <ul id="lista2">
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Vaga Europeia (Bósnia)</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p id="fato2">O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.</p>
+            </details>
+        </div>
+
+        <div id="item3" class="grupo-card">
+            <h2 id="titulo3">🅲 Grupo C</h2>
+            <h3>Seleções</h3>
+            <ul id="lista3">
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p id="fato3">Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.</p>
+            </details>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        function proximo() {
+            document.getElementById("titulo1").textContent = "Grupo 🅳";
+            document.getElementById("lista1").innerHTML = "<li>Estados Unidos</li><li>Paraguai</li><li>Austrália</li><li>Turquia</li>";
+            document.getElementById("fato1").textContent = "Os EUA jogam em casa, vantagem histórica em Copas. Austrália enfrenta frequentemente seleções sul-americanas em torneios.";
+
+            document.getElementById("titulo2").textContent = "Grupo 🅴";
+            document.getElementById("lista2").innerHTML = "<li>Alemanha</li><li>Equador</li><li>Costa do Marfim</li><li>Curaçao</li>";
+            document.getElementById("fato2").textContent = "Alemanha costuma dominar fases de grupos. Equador e Costa do Marfim têm estilos físicos semelhantes.";
+
+            document.getElementById("titulo3").textContent = "Grupo 🅵";
+            document.getElementById("lista3").innerHTML = "<li>Holanda</li><li>Japão</li><li>Tunísia</li><li>Suécia</li>";
+            document.getElementById("fato3").textContent = "Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.";
+        }
+    </script>
+</body>
+</html>
